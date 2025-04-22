@@ -381,7 +381,7 @@ virtual_wan_virtual_hubs = {
       vpn = {}
     }
 
-    /*
+
     private_dns_zones = {
       resource_group_name            = "$${dns_resource_group_name}"
       is_primary                     = false
@@ -403,7 +403,7 @@ virtual_wan_virtual_hubs = {
         zones = "$${starter_location_02_availability_zones}"
       }
     }
-    */    
+
     side_car_virtual_network = {
       name          = "$${secondary_sidecar_virtual_network_name}"
       address_space = ["$${secondary_side_car_virtual_network_address_space}"]
