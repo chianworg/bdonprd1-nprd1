@@ -188,11 +188,11 @@ management_group_settings = {
     */
     connectivity = {
       subscription_id       = "$${subscription_id_connectivity}"
-      management_group_name = "connectivity"
+      management_group_name = "mg-platform-connectivity-npd"
     }
     management = {
       subscription_id       = "$${subscription_id_management}"
-      management_group_name = "management"
+      management_group_name = "mg-platform-management-npd"
     }
   }
   policy_assignments_to_modify = {
@@ -221,7 +221,7 @@ management_group_settings = {
     }
 
     # Example of how to update a policy assignment enforcement mode for DDOS Protection Plan
-    connectivity = {
+    mg-platform-connectivity-npd = {
       policy_assignments = {
         Enable-DDoS-VNET = {
           enforcement_mode = "DoNotEnforce"
