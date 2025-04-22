@@ -403,11 +403,12 @@ virtual_wan_virtual_hubs = {
         zones = "$${starter_location_02_availability_zones}"
       }
     }
+    */    
     side_car_virtual_network = {
       name          = "$${secondary_sidecar_virtual_network_name}"
       address_space = ["$${secondary_side_car_virtual_network_address_space}"]
     }
-    */
+
   } 
 
 }
