@@ -28,7 +28,7 @@
         name = "$${secondary_virtual_network_gateway_vpn_name}"
       }
     }
-    */
+
     private_dns_zones = {
       resource_group_name            = "$${dns_resource_group_name}"
       is_primary                     = false
@@ -39,7 +39,7 @@
         name = "$${secondary_private_dns_resolver_name}"
       }
     }
-    /*
+
     bastion = {
       subnet_address_prefix = "$${secondary_bastion_subnet_address_prefix}"
       bastion_host = {
@@ -50,9 +50,9 @@
         zones = "$${starter_location_02_availability_zones}"
       }
     }
-    */
     side_car_virtual_network = {
       name          = "$${secondary_sidecar_virtual_network_name}"
       address_space = ["$${secondary_side_car_virtual_network_address_space}"]
     }
+    */
   } 
