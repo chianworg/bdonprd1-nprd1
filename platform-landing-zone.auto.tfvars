@@ -375,16 +375,10 @@ virtual_wan_virtual_hubs = {
     firewall_policy = {
       name = "$${secondary_firewall_policy_name}"
     }
-    /*
-    virtual_network_gateways = {
-      express_route = {
-        name = "$${secondary_virtual_network_gateway_express_route_name}"
-      }
-      vpn = {
-        name = "$${secondary_virtual_network_gateway_vpn_name}"
-      }
-    }
 
+    virtual_network_gateways = {}
+    
+    /*
     private_dns_zones = {
       resource_group_name            = "$${dns_resource_group_name}"
       is_primary                     = false
