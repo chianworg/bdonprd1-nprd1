@@ -376,41 +376,6 @@ virtual_wan_virtual_hubs = {
       name = "$${secondary_firewall_policy_name}"
     }
 
-/*
-    virtual_network_gateways = {
-      express_route = {}
-      vpn = {}
-    }
-*/
-
-    private_dns_zones = {
-      resource_group_name            = "$${dns_resource_group_name}"
-      is_primary                     = false
-      auto_registration_zone_enabled = true
-      auto_registration_zone_name    = "$${secondary_auto_registration_zone_name}"
-      subnet_address_prefix          = "$${secondary_private_dns_resolver_subnet_address_prefix}"
-      private_dns_resolver = {
-        name = "$${secondary_private_dns_resolver_name}"
-      }
-    }
-
-/*
-    bastion = {
-      subnet_address_prefix = "$${secondary_bastion_subnet_address_prefix}"
-      bastion_host = {
-        name = "$${secondary_bastion_host_name}"
-      }
-      bastion_public_ip = {
-        name  = "$${secondary_bastion_host_public_ip_name}"
-        zones = "$${starter_location_02_availability_zones}"
-      }
-    }
-*/
-    side_car_virtual_network = {
-      name          = "$${secondary_sidecar_virtual_network_name}"
-      address_space = ["$${secondary_side_car_virtual_network_address_space}"]
-    }
-
   } 
 
 }
