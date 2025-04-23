@@ -376,11 +376,12 @@ virtual_wan_virtual_hubs = {
       name = "$${secondary_firewall_policy_name}"
     }
 
+/*
     virtual_network_gateways = {
       express_route = {}
       vpn = {}
     }
-
+*/
 
     private_dns_zones = {
       resource_group_name            = "$${dns_resource_group_name}"
