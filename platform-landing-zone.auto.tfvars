@@ -354,28 +354,4 @@ virtual_wan_virtual_hubs = {
     }
   }
 
-  secondary = {
-    hub = {
-      name = "$${secondary_hub_name}"
-      /*
-      NOTE: We are defaulting to a separate resource group for the hub per best practice for resiliency
-      However, there is a known limitation with the portal experience: https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#can-hubs-be-created-in-different-resource-groups-in-virtual-wan
-      If you prefer to use the same resource group as the vwan, then set this to `$${connectivity_hub_vwan_resource_group_name}`
-      */
-      resource_group = "$${connectivity_hub_secondary_resource_group_name}"
-      location       = "$${starter_location_02}"
-      address_prefix = "$${secondary_hub_address_space}"
-    }
-    firewall = {
-      name     = "$${secondary_firewall_name}"
-      sku_name = "AZFW_Hub"
-      sku_tier = "Standard"
-      zones    = "$${starter_location_02_availability_zones}"
-    }
-    firewall_policy = {
-      name = "$${secondary_firewall_policy_name}"
-    }
-
-  } 
-
 }
